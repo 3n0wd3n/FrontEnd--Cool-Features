@@ -170,3 +170,28 @@ document.querySelector(event.target.hash)
 // Pokusí vybrat prvek v dokumentu na základě adresu URL zadanou v atributu href cíle události
 document.querySelector(event.target.href)
 
+// -----------------------------//
+
+// Příklad JSON objektu
+let jsonData = {
+  "name": "John Doe",
+  "age": 30,
+  "city": "New York"
+};
+
+// Převod JSON objektu na řetězec
+let jsonString = JSON.stringify(jsonData);
+console.log(jsonString);
+// Výstup: {"name":"John Doe","age":30,"city":"New York"}
+
+// Převod řetězce na JSON objekt
+let jsonObject = JSON.parse(jsonString);
+console.log(jsonObject);
+// Výstup: { name: 'John Doe', age: 30, city: 'New York' }
+
+// Přístup k hodnotám v JSON objektu
+console.log(jsonObject.name); // Výstup: John Doe
+console.log(jsonObject.age); // Výstup: 30
+console.log(jsonObject.city); // Výstup: New York
+
+
