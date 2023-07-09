@@ -61,6 +61,62 @@ obj.sayHello(); // Vypíše "Hello, John"
 
 // -----------------------------//
 
+const numbers = [1, 2, 3, 4, 5];
+
+// Filtrace (filter): Vybere pouze sudá čísla
+const evenNumbers = numbers.filter((number) => {
+  return number % 2 === 0;
+});
+console.log(evenNumbers); // Výstup: [2, 4]
+
+// Filtrace (filter): Vybere pouze sudá čísla - rychlejší zápis
+const evenNumbers2 = numbers.filter(number => number % 2 === 0);
+console.log(evenNumbers2); // Výstup: [2, 4]
+
+// -----------------------------//
+
+const numbers = [1, 2, 3, 4, 5];
+
+// Transformace (map): Vynásobí každé číslo dvěma
+const multipliedNumbers = numbers.map((number) => {
+    return number * 2;
+});
+console.log(multipliedNumbers); // Výstup: [2, 4, 6, 8, 10]
+
+// Transformace (map): Vynásobí každé číslo dvěma - rychlejší zápis
+const multipliedNumbers2 = numbers.map(number => number * 2);
+console.log(multipliedNumbers2); // Výstup: [2, 4, 6, 8, 10]
+
+// -----------------------------//
+
+const numbers = [1, 2, 3, 4, 5];
+
+// Redukce (reduce): Sčítá všechna čísla dohromady
+const sum = numbers.reduce((accumulator, curentNumber) => {
+    return accumulator + curentNumber
+    
+}, 0);
+console.log(sum); // Výstup: 15
+
+// Redukce (reduce): Sčítá všechna čísla dohromady - rychlejší zápis
+const sum2 = numbers.reduce((accumulator, curentNumber) => accumulator + curentNumber, 0);
+console.log(sum2); // Výstup: 15
+
+// -----------------------------//
+
+const numbers = [5, 4, 1, 3];
+
+// Řazení (sort): Seřadí čísla od nejmenšího po největší
+const sortedNumbers = numbers.sort((a, b) => {
+    return a - b;
+});
+console.log(sortedNumbers); // Výstup: [1, 2, 3, 4, 5]
+
+// Řazení (sort): Seřadí čísla od nejmenšího po největší - rychlejší zápis
+const sortedNumbers2 = numbers.sort((a, b) => a - b);
+console.log(sortedNumbers2); // Výstup: [1, 2, 3, 4, 5]
+
+
 
 
 
