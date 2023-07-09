@@ -162,4 +162,11 @@ const element = document.getElementById("myElement");
 const classCount = element.classList.length;
 console.log(classCount);
 
+// -----------------------------//
+
+// Vybere prvek v dokumentu, který má ID odpovídající hodnotě hash cíle události
+document.querySelector(event.target.hash)
+
+// Pokusí vybrat prvek v dokumentu na základě adresu URL zadanou v atributu href cíle události
+document.querySelector(event.target.href)
 
