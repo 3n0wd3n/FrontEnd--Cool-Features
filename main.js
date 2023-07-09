@@ -116,7 +116,50 @@ console.log(sortedNumbers); // Výstup: [1, 2, 3, 4, 5]
 const sortedNumbers2 = numbers.sort((a, b) => a - b);
 console.log(sortedNumbers2); // Výstup: [1, 2, 3, 4, 5]
 
+// -----------------------------//
 
+// add(className): Adds one or more class names to the element's list of classes.
+const element = document.getElementById("myElement");
+element.classList.add("newClass");
 
+// -----------------------------//
+
+// remove(className): Removes one or more class names from the element's list of classes.
+const element = document.getElementById("myElement");
+element.classList.remove("oldClass");
+
+// -----------------------------//
+
+// toggle(className): Toggles the presence of a class name in the element's list of classes. If the class name is already present, it is removed; otherwise, it is added.
+const element = document.getElementById("myElement");
+element.classList.toggle("active");
+
+// -----------------------------//
+
+// contains(className): Checks if the element has a specific class.
+const element = document.getElementById("myElement");
+if (element.classList.contains("special")) {
+  // Do something
+}
+
+// -----------------------------//
+
+// replace(oldClassName, newClassName): Replaces a class name with another class name.
+const element = document.getElementById("myElement");
+element.classList.replace("oldClass", "newClass");
+
+// -----------------------------//
+
+// item(index): Returns the class name at the specified index.
+const element = document.getElementById("myElement");
+const className = element.classList.item(0);
+console.log(className);
+
+// -----------------------------//
+
+// length: Returns the number of classes in the element's list of classes.
+const element = document.getElementById("myElement");
+const classCount = element.classList.length;
+console.log(classCount);
 
 
