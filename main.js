@@ -206,6 +206,36 @@ var element = document.getElementById("example");
 // Nastavte HTML obsah pomocí vlastnosti .innerHTML
 element.innerHTML = "<h1>Vítejte!</h1><p>Toto je příklad použití .innerHTML v JavaScriptu.</p>";
 
+// -----------------------------//
+
+// HTML
+<ul class="list">
+  <li class="list__item">A</li>
+  <li class="list__item">B</li>
+  <li class="list__item">C</li>
+</ul>
+
+// JS
+var newElement = document.createElement("li");
+var newTextNode = document.createTextNode("D");
+newElement.appendChild(newTextNode);
+newElement.style.color = "gold";
+newElement.classList.add("list__item")
+newElement.classList.add("list__item--last")
+
+// výběr seznamu
+var seznam = document.querySelector(".list");
+
+// přidání další položky seznamu
+seznam.appendChild(newElement);
+
+// přidání do středu seznamu
+var anotherNewElement = document.createElement("li");
+anotherNewElement.innerHTML = "E";
+seznam.insertBefore(anotherNewElement, seznam.children[2]);
+
+// přidání nadpisu
+seznam.insertAdjacentHTML("beforebegin", "<h1>nadpis</h1>")
 
 
 
