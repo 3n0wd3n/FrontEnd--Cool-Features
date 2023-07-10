@@ -237,5 +237,36 @@ seznam.insertBefore(anotherNewElement, seznam.children[2]);
 // přidání nadpisu
 seznam.insertAdjacentHTML("beforebegin", "<h1>nadpis</h1>")
 
+// změna na základě kliknutí
+document.addEventListener('click', function(event){  
+  let hash = document.querySelector(event.target.hash)
+  var newElement2 = document.createElement("li");
+  newElement2.innerHTML = "F"
+  newElement2.classList.add("list__item")
+  var seznam = document.querySelector(".list");
+  var listItems = document.querySelectorAll('.list__item');
+  if (!inStructure(listItems)){
+  seznam.appendChild(newElement2);
+  }
+})
+
+function inStructure(listItems) {
+  var breaker = false;
+
+  for (var i = 0; i < listItems.length; i++) {
+    var listItem = listItems[i];
+    console.log(listItem.textContent.trim())
+    if (listItem.textContent.trim() === "F") {
+      breaker = true;
+      break; // Ukončí procházení smyčky, protože prvek byl nalezen
+    }
+  }
+
+  return breaker;
+}
+
+
+
+
 
 
