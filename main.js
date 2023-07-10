@@ -194,4 +194,18 @@ console.log(jsonObject.name); // Výstup: John Doe
 console.log(jsonObject.age); // Výstup: 30
 console.log(jsonObject.city); // Výstup: New York
 
+// -----------------------------//
+
+// HTML
+<div id="example"></div>
+
+// JS
+// Vyberte element s id "example"
+var element = document.getElementById("example");
+
+// Nastavte HTML obsah pomocí vlastnosti .innerHTML
+element.innerHTML = "<h1>Vítejte!</h1><p>Toto je příklad použití .innerHTML v JavaScriptu.</p>";
+
+
+
 
