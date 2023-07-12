@@ -265,6 +265,12 @@ function inStructure(listItems) {
   return breaker;
 }
 
+// -----------------------------//
+
+let arr = ["ahoj", "aho", "ah"];
+arr.splice(1, 1); // Remove 1 element starting from index 1
+console.log(arr); // Output: ["ahoj", "ah"]
+
 
 
 
