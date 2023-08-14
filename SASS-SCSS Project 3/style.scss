@@ -1,0 +1,27 @@
+// Variables
+$primary-color-blue: #3498db;
+$primary-color-green: #27ae60;
+$primary-color-red: #e74c3c;
+
+// Mixin for button styles
+@mixin button-style($color) {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: $color;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+// Styles for buttons
+.button{
+  &--blue{
+    @include button-style($primary-color-blue);
+  }
+  &--green{
+    @include button-style($primary-color-green);
+}
+  &--red{
+    @include button-style($primary-color-red);
+  }}

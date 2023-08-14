@@ -1,0 +1,47 @@
+body {
+    background: #6e28d9;
+    color: white; /* Change my color to yellow */
+    padding: 0 24px;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    span {
+      color: green; /* Change my color to red */
+    }
+  }
+  
+  .button__container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+  
+    .button{
+      border-radius: 10px;
+      padding: 10px 20px;
+      border: 1px solid #6e28d9;
+  
+      &--blue{
+        background-color: blue;
+      }
+  
+      &--green{
+        background-color: green;
+      }
+  
+      &--red{
+        background-color: red;
+      }
+  
+      transition: .7s;
+      &:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+      }
+    }
+  }
