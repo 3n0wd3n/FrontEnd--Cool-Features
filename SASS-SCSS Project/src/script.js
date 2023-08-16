@@ -4,20 +4,15 @@
 //  console.log(span.textContent)
 // }
 
-let button = document.querySelector("button");
-let colorSpan = document.getElementById('color');
+let button = document.querySelectorAll(".button");
+let color = document.querySelector("#color");
 
-button.addEventListener('click', function(){
-  otherClasses = Array.from(button.classList);
-  for (let i = 0; i < otherClasses.length; i++){
-    if (otherClasses[i].includes("blue")){
-      colorSpan.style.color = "blue";
-    }
-    if (otherClasses[i].includes("green")){
-      colorSpan.style.color = "green";
-    }
-    if (otherClasses[i].includes("red")){
-      colorSpan.style.color = "red";
-    }
-  }
-})
+function test(btn) {
+  console.log(btn)
+}
+
+for (let i in button) {
+  button[i].onclick = function() {
+    test(button[i]);
+  };
+}
