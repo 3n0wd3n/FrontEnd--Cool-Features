@@ -9,8 +9,9 @@ body {
     align-items: center;
     flex-direction: column;
     
-    span {
-      color: green; /* Change my color to red */
+    #colorSpan {
+      transition: .7s;
+      color: white;
     }
   }
   
