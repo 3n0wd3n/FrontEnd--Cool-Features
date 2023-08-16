@@ -5,10 +5,18 @@
 // }
 
 let button = document.querySelectorAll(".button");
-let color = document.querySelector("#color");
+let colorSpan = document.querySelector("#colorSpan");
 
 function test(btn) {
-  console.log(btn)
+  if (btn.classList[1].includes("blue")){
+      colorSpan.style.color = "blue";
+  }
+  if (btn.classList[1].includes("green")){
+      colorSpan.style.color = "green";
+  } 
+  if (btn.classList[1].includes("red")){
+      colorSpan.style.color = "red";
+  } 
 }
 
 for (let i in button) {
