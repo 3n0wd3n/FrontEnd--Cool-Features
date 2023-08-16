@@ -142,3 +142,47 @@ $("button").on("click", function() {
 $("button").on("click", () => {
     console.log("Tlačítko bylo kliknuto.");
 });
+
+/*
+In jQuery, $(this) is a special keyword that refers to the current DOM element that is being operated upon within a callback function or event handler. It allows you to interact directly with the element that triggered the event or function, without needing to explicitly select it using jQuery selectors.
+
+Here's how $(this) works in jQuery:
+*/
+
+// Event Handlers: When you bind an event handler to an element, such as with .on("click", function() {...}), $(this) inside the callback function refers to the element that triggered the event. This is particularly useful when you want to perform actions on the specific element that was clicked or interacted with.
+
+$(".button").on("click", function() {
+    $(this).addClass("clicked");
+});
+
+// Iteration: If you are working within an iteration (such as .each()), $(this) refers to the current element being iterated over. This is often used when you need to perform operations on each element in a collection individually.
+
+$(".button").each(function() {
+    console.log($(this).text());
+});
+
+// Callback Functions: $(this) can be used within any callback function passed to jQuery methods to refer to the element being operated upon.
+
+$(".element").fadeOut("slow", function() {
+    console.log("Element faded out:", $(this));
+});
+
+/*
+Using $(this) makes your code more flexible and reusable because it allows you to work with the specific element directly, without needing to select it explicitly using a selector. It's a powerful feature that simplifies your code when working with events, iterations, and callbacks in jQuery.
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
