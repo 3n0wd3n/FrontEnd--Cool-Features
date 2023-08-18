@@ -1,0 +1,19 @@
+{
+  "name": "sass-basics",
+  "version": "1.0.0",
+  "description": "[SCSS COURSE](https://www.youtube.com/watch?v=wYWf2m_yzBQ&list=PL4-IK0AVhVjMYRhK9vRPatSlb-9r0aKgh)\r [SCSS](https://sass-lang.com/documentation/syntax/)",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.65.1"
+  },
+  "dependencies": {
+    "parcel-bundler": "^1.8.1"
+  }
+}
