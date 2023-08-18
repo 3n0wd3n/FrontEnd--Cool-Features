@@ -1,7 +1,37 @@
-/*Color variables*/
-$white: white;
-$black: black;
+/* Color Imports */
+/* @import './colors.scss'; -> deprecated */
+/* @use './colors.scss'; also works*/
+@use './colors.scss' as clrs; 
 
-body{
-    margin: 0
+/* Font Import */
+@use './fonts.scss';
+
+/* Default Imports */
+@use './default.scss' as default;
+
+/*Value Variables*/
+$zero: 0;
+
+body, h1{
+    
+    padding: $zero;
+    margin: $zero;
+    /*  background-color: colors.$pink;
+        color: colors.$white;
+    */
 }
+
+.main-container {
+    /* This will use the styles from default.scss */
+    @extend .container;
+    background-color: clrs.$pink;
+    color: clrs.$white;
+    
+    & > h1 {
+        font-family: fonts.$monoton;
+        font-size: 5rem;
+        letter-spacing: 10px;
+        text-align: center;
+    }
+}
+
