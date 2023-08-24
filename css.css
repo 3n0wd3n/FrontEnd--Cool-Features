@@ -1,0 +1,37 @@
+V CSS, selektory určují, na které části HTML struktury se mají pravidla stylů aplikovat. Oba selektory, které jste uvedl, mají rozdílný význam a mohou ovlivnit, na které prvky se pravidla budou aplikovat.
+
+.prvni-trida .druha-trida {}:
+/*Tento selektor znamená, že se pravidla budou aplikovat na všechny prvky s třídou .druha-trida, které jsou vnořené uvnitř prvků s třídou .prvni-trida. To znamená, že pravidla budou aplikována na libovolný prvek s třídou .druha-trida, pokud je obsažen uvnitř jiného prvku s třídou .prvni-trida.*/
+
+.prvni-trida.druha-trida {}:
+/*Tento selektor znamená, že se pravidla budou aplikovat na prvek, který má oba třídy .prvni-trida a .druha-trida. Tímto selektorem jsou vybrány pouze prvky, které mají obě třídy přiřazené jako součást svého atributu class. To znamená, že tento selektor osloví prvky, které mají obě třídy definovány v jednom class atributu, a nikoli vnořené prvky.*/
+
+/*Zde je malý příklad, který ukazuje rozdíl mezi oběma selektory:*/
+
+HTML:
+
+html
+
+<div class="prvni-trida">
+    <div class="druha-trida">Tento text bude ovlivněn prvním selektorem.</div>
+</div>
+<div class="prvni-trida druha-trida">Tento text bude ovlivněn oběma selektory.</div>
+<div class="prvni-trida">
+    <div class="jina-trida">
+        <div class="druha-trida">Tento text nebude ovlivněn žádným selektorem.</div>
+    </div>
+</div>
+
+CSS:
+
+css
+Copy code
+.prvni-trida .druha-trida {
+    color: blue;
+}
+
+.prvni-trida.druha-trida {
+    font-weight: bold;
+}
+
+V tomto příkladu první selektor ovlivní první div, zatímco druhý selektor ovlivní druhý div a třetí div.
